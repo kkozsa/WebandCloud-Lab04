@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <script type="text/javascript">
+
+            var startProgram = function()
+            {
+                var htmlOutput = "";
+
+                // Reset paragraph1 content
+                htmlOutput = "";
+
+                // Create array
+                var myArray = ["BMW", "Toyota", "Nissan"];
+
+                // Array print array
+                htmlOutput += "Array: print array<br>";
+                htmlOutput += myArray + "<br>";
+                htmlOutput += "<br>";
+
+                // Array: printing elements one by one
+                htmlOutput += "Array: printing elements one by one <br>";
+                htmlOutput += myArray[0] + "<br>";
+                htmlOutput += myArray[1] + "<br>";
+                htmlOutput += myArray[2] + "<br>";
+                htmlOutput += "<br>";
+
+                // Array: add element at the end - method 1
+                myArray[3] = "Mercedes";
+                htmlOutput += "Array: add element at the end - method 1 <br>";
+                htmlOutput += myArray + "<br>";
+                htmlOutput += "<br>";
+
+                // Array: add element at the end - method 2
+                myArray[myArray.length] = "Peugeot";
+                htmlOutput += "Array: add element at the end - method 2 <br>";
+                htmlOutput += myArray + "<br>";
+                htmlOutput += "<br>";
+
+                // Array: add element at the end - method 3
+                myArray.push("Renault");
+                htmlOutput += "Array: add element at the end - method 3 <br>";
+                htmlOutput += myArray + "<br>";
+                htmlOutput += "<br>";
+
+                // Array: Insert inside item
+                htmlOutput += "rray: Insert inside item <br>";
+                myArray.splice(3, 0, "Chevrolet");
+                htmlOutput += myArray + "<br>";
+                htmlOutput += "<br>";
+
+                            // Add another 2 makes of cars to the array called myArray
+
+                myArray[myArray.length] = "Fiat";
+                myArray[myArray.length] = "Suzuki";
+
+                            // Add additional elements (makes of cars) using methods 1, 2 and 3. 
+                
+                myArray[9] = "Mclaren";
+                myArray[myArray.length] = "Trabant";
+                myArray.push("Seat");
+
+                            // Attempt to add another element(make of car) into your array using splice
+
+                myArray.splice(4, 0, "Ferrari");
+
+                // Array: Print array elements with a loop
+                htmlOutput += "Array: Print array elements with a loop <br>";
+                for (var i=0; i < myArray.length; i++)
+                {
+                    htmlOutput += myArray[i] + "<br>";
+                }
+
+                // Clear array
+                myArray = [];
+
+                // Show output
+                document.getElementById("paragraph1").innerHTML = htmlOutput;
+
+            }
+
+        </script>
+
+    </head>
+
+    <body onLoad ="startProgram();">
+        Java script tutorial <br>
+        <p id="paragraph1">
+            This content will be replaced by javascript content.
+        </p>
+    </body>
+
+</html>

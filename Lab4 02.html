@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <script type="text/javascript">
+
+            var startProgram = function()
+            {
+
+                // Numbers read from input as string
+                var gradeInput = window.prompt("Enter student grade");
+
+                // Numbers used to convert string input to float
+                var grade = parseFloat(gradeInput);
+
+                // Making a decision
+                if (grade<60.0)
+                {
+
+                    // Show output
+                    document.getElementById("paragraph1").innerHTML="Apply for a Makeup.";
+
+                }
+                else
+                {
+
+                    // Show output
+                    document.getElementById("paragraph1").innerHTML="Well done you have passed.";
+
+                }
+
+            }
+
+        </script>
+
+    </head>
+
+    <body onLoad ="startProgram();">
+        Java script tutorial <br>
+        <p id="paragraph1">
+            This content will be replaced by javascript content.
+        </p>
+
+    </body>
+
+</html>

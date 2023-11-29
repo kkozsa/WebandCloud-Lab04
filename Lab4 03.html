@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script type="text/javascript">
+var startProgram = function()
+{
+
+    var htmlOutput = "";
+
+    // Counting number from 1 to 20
+
+    for (var i=1; i<=20; i++)
+    {
+    // Check if number is even
+    if (i % 2 === 0)
+    {
+
+    // Add new line for html ouyput with value counter i
+    htmlOutput = htmlOutput + "i= " + i + "<br>";
+
+    }
+    }
+
+    // Show output
+    document.getElementById("paragraph1").innerHTML = htmlOutput;
+
+}
+
+</script>
+
+</head>
+
+<body onload="startProgram();">
+    Java script tutorial<br>
+    <p id="paragraph1">
+        This content will be replaced by javascript content.
+    </p>
+</body>
+
+</html>
